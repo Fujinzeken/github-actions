@@ -1,0 +1,17 @@
+# first create name for the workflow
+name: First Workflow
+
+# workflow_dispatch is an event that makes sure that the user has to manually start the workflow
+on: workflow_dispatch
+
+jobs:
+  first-job:
+    #first define the runner for the named job above
+    runs-on: ubuntu-latest
+    #after runner, define the steps
+    steps:
+      - name: Print greeting
+        run: echo "Hello"
+      - name: Print goodbye
+        run: echo "first-job done, Goodbye"
+    
